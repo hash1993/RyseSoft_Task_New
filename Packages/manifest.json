@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.dbrizov.naughtyattributes": "2.1.3",
     "com.unity.collab-proxy": "2.9.3",
     "com.unity.formats.fbx": "5.1.5",
     "com.unity.multiplayer.center": "1.0.0",
@@ -10,10 +11,10 @@
     "com.unity.timeline": "1.8.9",
     "com.unity.ugui": "2.0.0",
     "com.unity.visualscripting": "1.9.7",
-    "net.peeweek.build-frontend": "https://github.com/peeweek/net.peeweek.build-frontend.git",
-    "net.peeweek.console": "file:D:/0. Hashir's Work/SpaceshipDemo-master/SpaceshipDemo-master/ExternalPackages/net.peeweek.console",
-    "net.peeweek.game-options": "file:D:/0. Hashir's Work/SpaceshipDemo-master/SpaceshipDemo-master/ExternalPackages/net.peeweek.game-options",
-    "net.peeweek.gameplay-ingredients": "2021.3.2",
+    "net.peeweek.build-frontend": "file:../ExternalPackages/net.peeweek.build-frontend",
+    "net.peeweek.console": "file:../ExternalPackages/net.peeweek.console",
+    "net.peeweek.game-options": "file:../ExternalPackages/net.peeweek.game-options",
+    "net.peeweek.gameplay-ingredients": "file:../ExternalPackages/net.peeweek.gameplay-ingredients",
     "com.unity.modules.accessibility": "1.0.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",

@@ -248,22 +248,21 @@
       "url": "https://packages.unity.com"
     },
     "net.peeweek.build-frontend": {
-      "version": "https://github.com/peeweek/net.peeweek.build-frontend.git",
+      "version": "file:../ExternalPackages/net.peeweek.build-frontend",
       "depth": 0,
-      "source": "git",
+      "source": "local",
       "dependencies": {
         "com.unity.build-report-inspector": "0.2.2-preview"
-      },
-      "hash": "2d0011d06b41066073b58757a48b1902cff564ea"
+      }
     },
     "net.peeweek.console": {
-      "version": "file:D:/0. Hashir's Work/SpaceshipDemo-master/SpaceshipDemo-master/ExternalPackages/net.peeweek.console",
+      "version": "file:../ExternalPackages/net.peeweek.console",
       "depth": 0,
       "source": "local",
       "dependencies": {}
     },
     "net.peeweek.game-options": {
-      "version": "file:D:/0. Hashir's Work/SpaceshipDemo-master/SpaceshipDemo-master/ExternalPackages/net.peeweek.game-options",
+      "version": "file:../ExternalPackages/net.peeweek.game-options",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -271,15 +270,14 @@
       }
     },
     "net.peeweek.gameplay-ingredients": {
-      "version": "2021.3.2",
+      "version": "file:../ExternalPackages/net.peeweek.gameplay-ingredients",
       "depth": 0,
-      "source": "registry",
+      "source": "local",
       "dependencies": {
         "com.unity.cinemachine": "2.8.4",
         "com.unity.timeline": "1.6.4",
         "com.dbrizov.naughtyattributes": "2.1.4"
-      },
-      "url": "https://package.openupm.com"
+      }
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",

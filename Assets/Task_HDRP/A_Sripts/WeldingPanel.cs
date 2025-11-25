@@ -13,10 +13,10 @@ public class WeldingPanel : MonoBehaviour
 
     [SerializeField] private Transform[] panels;
 
-    [SerializeField] private Material blobErrorMat, blobGoodMat;
+   
 
     [SerializeField] private GameObject weldScanner;
-    [SerializeField] private int checkTimeSec = 2;
+ 
     [SerializeField] private Transform[] checkingTransforms;
    public UnityEngine.UI.Slider weldingProgressSlider;
    public UnityEngine.UI.Text weldingProgressText;
@@ -103,66 +103,7 @@ public class WeldingPanel : MonoBehaviour
 
     bool isWeldingStatsDone = false;
     WeldingStats weldingStats;
-    internal void PopulateWeldingStats(out int delayTimeSec)
-    {
-        
    
-
-        delayTimeSec = checkTimeSec;
-
-        isWeldingStatsDone = false;
-
-        weldingStats = new WeldingStats();
-
-        if (checkerCapsule == null)
-            checkerCapsule = Instantiate(weldScanner, checkingPoints[0], Quaternion.identity).transform;
-
-        if (checkerLight == null)
-            checkerLight = checkerCapsule.GetComponent<WeldCheckerLight>();
-
-        checkerCapsule.rotation = checkingTransforms[0].rotation; //Match rotation in case of corner welds needs a bit of tilt.
-
-        weldingStats.uniformity = GetUniformity();
-        weldingStats.travel = GetWeldTravelUniformity();
-
-        weldingStats.badweldCount = GetBadWelds();
-        weldingStats.holesCount = GetWeldHoles();
-
-        int totalCount = 0;
-        int blobCount = 0;
-
-   LeanTween.move(checkerCapsule.gameObject, checkingPoints, checkTimeSec)
-    .setOnUpdate((Vector3 positionValue) =>
-    {
-        bool hasBlob = RaycastCheckWeld(checkerCapsule);
-        totalCount++;
-
-        if (hasBlob)
-        {
-            blobCount++;
-            checkerLight.ShowColor(true);
-            checkerCapsule.GetComponent<AudioSource>().pitch = 1f;
-        }
-        else
-        {
-            checkerCapsule.GetComponent<AudioSource>().pitch = 1.3f;
-            checkerLight.ShowColor(false);
-        }
-    })
-    .setOnComplete(() =>
-    {
-        weldingStats.coveragePercent = (float)blobCount / (float)totalCount;
-        isWeldingStatsDone = true;
-
-        
-
-        Destroy(checkerCapsule.gameObject);
-    });
-
-
-
-    }
-
     internal bool GetWeldResults(out WeldingStats stats)
     {
         stats = weldingStats;
@@ -207,11 +148,8 @@ public class WeldingPanel : MonoBehaviour
                 //Change to Weld Panel Layer, to not get counted by coverage detection.
                 blob.gameObject.layer = 7; 
 
-                //Delay change color for effect
-                LeanTween.value(0, 1, checkTimeSec).setOnComplete(() =>
-                {
-                    blob.GetComponent<Renderer>().material = blobErrorMat;
-                });
+              
+             
             }
 
 
@@ -221,14 +159,7 @@ public class WeldingPanel : MonoBehaviour
         //Good welds
         WeldingBlobSet[] goodBlobs = weldingCollider.transform.GetComponentsInChildren<WeldingBlobSet>();
 
-        foreach (WeldingBlobSet blob in goodBlobs)
-        {
-            //Delay change color for effect
-            LeanTween.value(0, 1, checkTimeSec).setOnComplete(() =>
-            {
-                blob.GetComponent<Renderer>().material = blobGoodMat;
-            });
-        }
+        
 
         return badWeldsCount;
     }

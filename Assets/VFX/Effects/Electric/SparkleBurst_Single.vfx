@@ -68,10 +68,10 @@ MonoBehaviour:
   - title: Compute Random Direction For Event
     position:
       serializedVersion: 2
-      x: 2802
-      y: -964
-      width: 869
-      height: 580
+      x: 2419
+      y: -1366
+      width: 1279
+      height: 980
     contents:
     - model: {fileID: 8926484042661615153}
       id: 0
@@ -95,10 +95,10 @@ MonoBehaviour:
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: 2802
-    y: -966
-    width: 1662
-    height: 841
+    x: 2419
+    y: -1366
+    width: 2045
+    height: 1241
 --- !u!114 &114616963954940652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114096792637759078}
   m_Children: []
-  m_UIPosition: {x: 3113, y: -907}
+  m_UIPosition: {x: 2444, y: -1307}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:

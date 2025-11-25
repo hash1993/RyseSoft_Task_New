@@ -30,7 +30,7 @@ namespace GameplayIngredients
                 return (T)s_Managers[typeof(T)];
             else
             {
-                Debug.LogError($"Manager of type '{typeof(T)}' could not be accessed. Check the excludedManagers list in your GameplayIngredientsSettings configuration file.");
+              //  Debug.LogError($"Manager of type '{typeof(T)}' could not be accessed. Check the excludedManagers list in your GameplayIngredientsSettings configuration file.");
                 return null;
             }
         }
@@ -50,7 +50,7 @@ namespace GameplayIngredients
             var exclusionList = GameplayIngredientsSettings.currentSettings.excludedeManagers;
 
             if(GameplayIngredientsSettings.currentSettings.verboseCalls)
-                Debug.Log("Initializing all Managers...");
+               // Debug.Log("Initializing all Managers...");
 
             foreach(var type in kAllManagerTypes)
             {
@@ -62,7 +62,7 @@ namespace GameplayIngredients
                 // Check for entries in exclusion List
                 if (exclusionList != null && exclusionList.ToList().Contains(type.Name))
                 {
-                    Debug.LogWarning($"Manager : {type.Name} is in GameplayIngredientSettings.excludedeManagers List: ignoring Creation");
+                   // Debug.LogWarning($"Manager : {type.Name} is in GameplayIngredientSettings.excludedeManagers List: ignoring Creation");
                     continue;
                 }
 
@@ -84,7 +84,7 @@ namespace GameplayIngredients
                     }
                     else
                     {
-                        Debug.LogError($"Could not instantiate default prefab for {type.ToString()} : No prefab '{prefabAttr.prefab}' found in resources folders. Ignoring...");
+                       // Debug.LogError($"Could not instantiate default prefab for {type.ToString()} : No prefab '{prefabAttr.prefab}' found in resources folders. Ignoring...");
                         continue;
                     }
                 }
