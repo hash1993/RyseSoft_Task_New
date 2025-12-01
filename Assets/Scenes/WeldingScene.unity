@@ -2527,6 +2527,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 809934820}
     m_Modifications:
+    - target: {fileID: 953437861313156361, guid: 20954f36509e63e4ea41dd9b7ac73336, type: 3}
+      propertyPath: OnEnableEvent.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3280649855501655872, guid: 20954f36509e63e4ea41dd9b7ac73336, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.213
@@ -2559,9 +2563,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7505372631675523678, guid: 20954f36509e63e4ea41dd9b7ac73336, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505372631675523679, guid: 20954f36509e63e4ea41dd9b7ac73336, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505372631850974660, guid: 20954f36509e63e4ea41dd9b7ac73336, type: 3}
+      propertyPath: m_Asset
+      value: 
+      objectReference: {fileID: 8926484042661614526, guid: 136ee4ff3a712604399c01bf3929873f, type: 3}
     - target: {fileID: 7505372631850974661, guid: 20954f36509e63e4ea41dd9b7ac73336, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505372631850974661, guid: 20954f36509e63e4ea41dd9b7ac73336, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7505372631850974661, guid: 20954f36509e63e4ea41dd9b7ac73336, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -2615,6 +2635,10 @@ PrefabInstance:
       propertyPath: DelayRange.y
       value: 1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7505372631875992212, guid: 20954f36509e63e4ea41dd9b7ac73336, type: 3}
+      propertyPath: 'OnDelayComplete.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2002509904}
     - target: {fileID: 7505372631875992213, guid: 20954f36509e63e4ea41dd9b7ac73336, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2678,6 +2702,10 @@ PrefabInstance:
     - target: {fileID: 7505372631875992215, guid: 20954f36509e63e4ea41dd9b7ac73336, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566983336690806803, guid: 20954f36509e63e4ea41dd9b7ac73336, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8031248462123336437, guid: 20954f36509e63e4ea41dd9b7ac73336, type: 3}
       propertyPath: Targets.Array.data[0].State
